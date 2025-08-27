@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Noto serif";
+  src: url(fonts/noto-serif/notoserif-variablefont_wdthwght-webfont.woff)
+    format("woff");
+  src: url(fonts/noto-serif/notoserif-variablefont_wdthwght-webfont.woff2)
+    format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  font-family: Noto Serif;
+}
+
+:root {
+
+}
