@@ -12,10 +12,69 @@
 
 body,
 html {
-  height: 100vh;
+  height: 100%;
   font-family: Noto Serif;
+  background-color: #f9faf8;
+  margin: 0;
+}
+
+body {
+    width: 100vw;
+}
+
+main {
+    padding: 1rem;
 }
 
 :root {
+  --white: #fff;
+  --navy: #003049;
+}
 
+.hero-section {
+    position: relative;
+    height: max-content;
+}
+
+.diagonal-bg {
+  position: absolute;
+  z-index: 0;
+  background-color: var(--navy);
+  height: 70%;
+  width: 200%;
+  transform: rotateZ(-25deg);
+  top:-30%;
+  left: -50%;
+}
+
+.hero {
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+}
+
+.portrait-card {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 1rem;
+    /* height: max-content; */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.portrait-name {
+  color: var(--white);
+  font-size: clamp(2rem, 20vw, 5rem);
+  position: absolute;
+  z-index: 2;
+  left: 1.5rem;
+  bottom: 0;
+  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.7);
+  line-height: 1;
+  margin-bottom: 1.5rem;
 }

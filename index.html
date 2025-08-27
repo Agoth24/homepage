@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        
+      <div class="hero-section">
+        <div class="diagonal-bg"></div>
+        <section class="hero">
+          <div class="portrait-card">
+            <picture>
+              <source
+                media="(min-width: 800px)"
+                srcset="images/agoth-ferris-wheel_800.webp"
+              />
+              <source
+                media="(max-width: 799px)"
+                srcset="images/agoth-ferris-wheel_480.webp"
+              />
+              <img src="images/agoth-ferris-wheel_480.webp" alt="" />
+            </picture>
+            <h1 class="portrait-name">Agoth Arop</h1>
+          </div>
+          <div class="about"></div>
+        </section>
+      </div>
     </main>
-</body>
+  </body>
 </html>
