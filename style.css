@@ -24,7 +24,7 @@ body {
 }
 
 main {
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -34,11 +34,13 @@ main {
 h2 {
   font-size: 2rem;
   font-weight: 300;
+  margin: 0;
 }
 
 :root {
   --white: #f9faf8;
   --navy: #003049;
+  --memphis-blue: #669bbc;
 }
 
 .hero-section {
@@ -64,6 +66,7 @@ h2 {
   flex-direction: column;
   gap: 1rem;
   justify-self: center;
+  padding: 1rem;
 }
 
 .portrait-card {
@@ -73,7 +76,7 @@ h2 {
   margin: 1rem;
 }
 
-picture > img {
+.portrait-card img {
   max-width: 100%;
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -135,7 +138,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .card {
@@ -146,12 +149,12 @@ p {
 }
 
 .card img {
-    min-height: 200px;
-    background-color: gray;
+  min-height: 200px;
+  background-color: gray;
 }
 .card-info {
-    padding: 1rem;
-    min-height: 200px;
+  padding: 1rem;
+  min-height: 200px;
 }
 
 .card-title {
@@ -166,10 +169,41 @@ p {
   margin: 0;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: var(--memphis-blue);
+  min-width: 100vw;
+  justify-content: space-between;
+}
+
+.contact-title {
+  text-align: center;
+}
+
+.contact-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact-info > * {
+  color: #fff;
+}
+
+.contact img {
+max-width: 100%;
+}
+
 @media (min-width: 600px) {
-  main {
-    padding: 3rem;
-  }
+/* Apply horizontal padding to all direct children of main except the .hero section */
+main > *:not(.hero, .contact) {
+    padding-inline: 3rem;
+}
+
   .portrait-card {
     margin: 0;
     flex: 1 1 auto;
@@ -210,6 +244,34 @@ p {
   }
 
   .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+
+  .card {
+    min-width: 350px;
+  }
+
+  .contact {
+    flex-direction: row;
+    min-width: 100%;
+    /* height: max-content; */
+  }
+
+  .contact-title {
+    text-align: start;
+  }
+
+  .contact picture {
+    max-height: 600px;
+    display: flex;
+    justify-content: end;
+  }
+  .contact img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .contact-info .socials {
+    align-self: start;
   }
 }
