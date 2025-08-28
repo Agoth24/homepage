@@ -19,11 +19,13 @@ html {
 }
 
 body {
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 main {
     padding: 1rem;
+    display: flex;
 }
 
 :root {
@@ -40,10 +42,10 @@ main {
   position: absolute;
   z-index: 0;
   background-color: var(--navy);
-  height: 70%;
-  width: 200%;
+  height: 100%;
+  width: 200vw;
   transform: rotateZ(-25deg);
-  top:-30%;
+  top: -50%;
   left: -50%;
 }
 
@@ -70,6 +72,7 @@ img {
 .portrait-name {
   color: var(--white);
   font-size: clamp(2rem, 20vw, 5rem);
+  font-weight: 200;
   position: absolute;
   z-index: 2;
   left: 1.5rem;
@@ -77,4 +80,10 @@ img {
   text-shadow: 0 4px 3px rgba(0, 0, 0, 0.7);
   line-height: 1;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .diagonal-bg {
+        transform: rotateZ(-10deg);
+    }
 }
