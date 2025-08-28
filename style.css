@@ -72,7 +72,6 @@ h2 {
   position: relative;
   z-index: 2;
   max-width: 500px;
-  /* margin: 1rem; */
 }
 
 .portrait-card img {
@@ -166,6 +165,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  min-height: 200px;
 }
 
 .card-title {
