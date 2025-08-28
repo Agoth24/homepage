@@ -19,30 +19,31 @@ html {
 }
 
 body {
-    width: 100%;
-    overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
-    padding: 1rem;
-    display: flex;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 :root {
-  --white: #fff;
+  --white: #f9faf8;
   --navy: #003049;
 }
 
 .hero-section {
-    position: relative;
-    height: max-content;
+  position: relative;
+  min-height: 100vh;
 }
 
 .diagonal-bg {
   position: absolute;
   z-index: 0;
   background-color: var(--navy);
-  height: 100%;
+  height: 150vh;
   width: 200vw;
   transform: rotateZ(-25deg);
   top: -50%;
@@ -53,28 +54,30 @@ main {
   position: relative;
   margin: 0 auto;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .portrait-card {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
-    margin: 1rem;
-    /* height: max-content; */
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin: 1rem;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .portrait-name {
-  color: var(--white);
+  color: #fff;
   font-size: clamp(2rem, 20vw, 5rem);
   font-weight: 200;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 1.5rem;
   bottom: 0;
   text-shadow: 0 4px 3px rgba(0, 0, 0, 0.7);
@@ -83,7 +86,45 @@ img {
 }
 
 @media (min-width: 600px) {
-    .diagonal-bg {
-        transform: rotateZ(-10deg);
-    }
+.portrait-card {
+    margin: 0;
+}
+
+  .diagonal-bg {
+    transform: rotateZ(-10deg);
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  .about {
+    padding: 2rem;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  background-color: var(--white);
+  max-width: 100ch;
+}
+
+.about h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.about p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(53, 53, 53);
+    font-size: 1.125em;
+    line-height: 1.5;
 }
